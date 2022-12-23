@@ -1,0 +1,24 @@
+---
+- name: sleep playbook
+  hosts: demo
+  tasks:
+    - name: Preconfig block
+      block:
+        - name: Reboot
+          shell: reboot
+          async: 1000
+          poll: 0
+        # - debug:
+        #     var: sleep
+        # - name: Echo
+        #   command: echo "DONE"
+      become: true
+    # - name: Check sleep status
+      # async_status:
+      #   jid: "{{ sleep.ansible_job_id }}"
+      # register: job_result
+      # until: job_result.finished
+      # retries: 100
+      # delay: 1
+      # become: true
+
