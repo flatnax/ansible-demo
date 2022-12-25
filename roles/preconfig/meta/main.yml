@@ -11,6 +11,6 @@ argument_specs:
   main:
     short_decrption: Настройка серверов для работы с docker
     author: Anton Larichev
-dependencies:
-  - role: deploy
+# dependencies:
+#   - role: deploy
 # allow_duplicates: true
