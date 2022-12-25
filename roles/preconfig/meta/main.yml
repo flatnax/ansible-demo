@@ -1,9 +1,8 @@
----
 galaxy_info:
   author: ES
   description: test
   license: free
-  min_ansible_version: "2.8"
+  min_ansible_version: "2.9"
   platforms:
     - name: Ubuntu
       versions:
@@ -14,3 +13,4 @@ argument_specs:
     author: Anton Larichev
 dependencies:
   - role: deploy
+# allow_duplicates: true
