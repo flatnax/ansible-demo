@@ -1,0 +1,6 @@
+[cluster]
+server1 ansible_host=172.16.21.3 ansible_user=vagrant ansible_port=2223 ansible_ssh_private_key_file=/home/flat/.ssh/id_rsa_home
+server2 ansible_host=172.16.21.3 ansible_user=vagrant ansible_port=2224 ansible_ssh_private_key_file=/home/flat/.ssh/id_rsa_home
+server3 ansible_host=172.16.21.3 ansible_user=vagrant ansible_port=2225 ansible_ssh_private_key_file=/home/flat/.ssh/id_rsa_home
+server4 ansible_host=172.16.21.3 ansible_user=vagrant ansible_port=2226 ansible_ssh_private_key_file=/home/flat/.ssh/id_rsa_home
+server5 ansible_host=172.16.21.3 ansible_user=vagrant ansible_port=2227 ansible_ssh_private_key_file=/home/flat/.ssh/id_rsa_home
