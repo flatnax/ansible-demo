@@ -1,3 +1,5 @@
 venv/
 venv3.11/
 .pass
+.vscode/
+.idea/
