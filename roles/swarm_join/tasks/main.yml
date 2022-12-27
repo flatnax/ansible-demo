@@ -1,8 +1,16 @@
 ---
-- name: Подключение к swarm
-  vars:
-    token: "{{ lookup('file', '../../tokens/token-{{ type }}') }}"
+# - name: Подключение к swarm debug
+#   ansible.builtin.debug:
+#     msg: "{{ hostvars['server1']['ansible_facts'] }}"
+- name: Подключение
+#   vars:
+#     token: "{{ lookup('file', '../../tokens/token-{{ type }}') }}"
   community.docker.docker_swarm:
     state: join
     remote_addrs: "{{ advertise_addr }}"
-    join_token: "{{ token }}"
+    join_token: >
+      {{
+        hostvars['server1']['ansible_facts']['token_worker']
+        if type == 'worker' else
+        hostvars['server1']['ansible_facts']['token_manager']
+      }}
