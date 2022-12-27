@@ -1,4 +1,0 @@
----
-- name: Тест
-  debug:
-    msg: TEST

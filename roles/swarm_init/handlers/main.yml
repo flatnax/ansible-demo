@@ -1,0 +1,4 @@
+---
+- name: Тест
+  ansible.builtin.debug:
+    msg: Тест
