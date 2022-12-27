@@ -1,7 +1,7 @@
 galaxy_info:
-  role_name: preconfig
+  role_name: build
+  description: Build монорепозитория
   author: Anton Larichev
-  description: Настройка серверов для работы с Docker
   license: MIT
   min_ansible_version: "2.9"
   platforms:
