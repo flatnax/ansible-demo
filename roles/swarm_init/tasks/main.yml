@@ -1,0 +1,24 @@
+---
+- name: Инициализация swarm
+  community.docker.docker_swarm:
+    state: present
+    advertise_addr: "{{ advertise_addr }}"
+  register: token
+
+- name: Наличие директории
+  ansible.builtin.file:
+    path: ./tokens
+    state: directory
+  delegate_to: localhost
+
+- name: Сохранение токена manager
+  ansible.builtin.copy:
+    dest: ./tokens/token-manager
+    content: "{{ token.swarm_facts.JoinTokens.Manager }}"
+  delegate_to: localhost
+
+- name: Сохранение токена worker
+  ansible.builtin.copy:
+    dest: ./tokens/token-worker
+    content: "{{ token.swarm_facts.JoinTokens.Worker }}"
+  delegate_to: localhost
